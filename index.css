@@ -1,0 +1,247 @@
+:root {
+  --background-color: #CCC;
+  --card-background-color: #FFF;
+  --text-color: #222222;
+
+  --first-color-gradient: #ba3be8;
+  --last-color-gradient: #790be1;
+
+  font-size: 16px;  
+  font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+	background-color: var(--background-color);
+  font-size: 1rem;
+}
+
+#container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+
+.card {
+  background-color: var(--card-background-color);
+  border-radius: 1rem;
+  /* box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); */
+  padding: 2rem 4rem;
+  width: 100%;
+  max-width: 700px;
+  overflow: hidden;
+}
+
+main {
+  padding-top: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+main > article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  "number"
+  "slide"
+  "caption"
+  "icons";
+  width: 100%;
+  max-width: 20rem;
+  
+}
+
+.number {
+  grid-area: number;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.number button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.number svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.slide-container {
+  grid-area: slide;
+  display: grid;
+  place-items: center;
+}
+
+#slider {
+  width: 100%;
+  height: 100%;
+  max-height: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-image: linear-gradient(.25turn, #f00, #00f);
+}
+
+.profile-caption {
+  grid-area: caption;
+  width: 100%;
+  text-align: center;
+}
+
+.profile-caption strong {
+  font-size: 1.2rem;
+  /* text-transform: uppercase; */
+  font-variant: small-caps;
+  font-weight: bolder;  
+}
+
+.icons {
+  grid-area: icons;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.icons svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.icons a {
+  text-decoration: none;
+  border-radius: 50%;
+  color: #FFF;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.youtube-button {
+  background-color: #FF0000;
+}
+
+.twitter-button {
+  background-color: #1DA1F2;
+}
+
+.linkedin-button {
+  background-color: #0077B5;
+}
+
+.instagram-button {
+  background-color: #E1306C;
+}
+
+.facebook-button {
+  background-color: #3B5998;
+}
+
+
+.payment-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-type button {
+  background-color: #FFF;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.5rem;
+  width: 10rem;
+  height: 4rem;
+  color: #a9a9a9;
+}
+
+.payment-type button:first-child {
+  border-radius: 50% 0% 0 50% / 100% 0% 0% 100%;
+}
+
+.payment-type button:last-child {
+  border-radius: 0 50% 50% 0 / 0 100% 100% 0;
+}
+
+.payment-type button.active {
+  color: #FFF;
+}
+
+.payment-type button:first-child.active {
+  background-image: linear-gradient(to right, var(--first-color-gradient), var(--last-color-gradient));
+}
+
+.payment-type button:last-child.active {
+  background-image: linear-gradient(to left, var(--first-color-gradient), var(--last-color-gradient));
+}
+
+.card > header {
+  background-image: linear-gradient(to right, var(--first-color-gradient), var(--last-color-gradient));
+  padding: .5rem 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.card > header > h1 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.payment-plan {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 0;
+  padding-bottom: 2rem;
+  margin-top: 1.5rem;
+}
+
+.payment-plan article {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.payment-plan footer {
+  display: grid;
+  place-items: center;
+}
+
+#button-purchase {
+  background-image: linear-gradient(to right, var(--first-color-gradient), var(--last-color-gradient));
+  color: #FFF;
+  border: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  width: 14rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  border-radius: 1.75rem;
+}
